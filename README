@@ -1,4 +1,20 @@
-Forked from https://github.com/dhepper/font8x8 by yanhu1hang in March 2018, who merged several header files into one and made some minor changes. Original README below.
+In March 2018, for my framebuffer projects, I (yanhu1hang) forked https://github.com/dhepper/font8x8, and merged several header files into one and made some minor changes. Usage:
+
+       void render(char *bitmap) {
+            int x,y;
+            int set;
+            for (x=0; x < 8; x++) {
+                for (y=0; y < 8; y++) {
+                    set = bitmap[x] & 1 << y;
+                    printf("%c", set ? 'X' : ' ');
+                }
+                printf("\n");
+            }
+       }
+
+       render(font8x8_basic['A']);
+
+Original README below.
 
 
 
