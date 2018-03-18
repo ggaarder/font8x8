@@ -17,7 +17,23 @@
  * //     Public Domain
  * 
  * Fetched from: http://dimensionalrift.homelinux.net/combuster/mos3/?p=viewsource&file=/modules/gfx/font8_8.asm
- **/
+ *
+ */
+
+// Usage:
+// void render(char *bitmap) {
+//     int x,y;
+//     int set;
+//     for (x=0; x < 8; x++) {
+//         for (y=0; y < 8; y++) {
+//             set = bitmap[x] & 1 << y;
+//             printf("%c", set ? 'X' : ' ');
+//         }
+//         printf("\n");
+//     }
+// }
+//
+// render(font8x8_basic['A']);
 
 // basic latin
 // extended latin
