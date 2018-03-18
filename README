@@ -1,51 +1,10 @@
-In March 2018, for my framebuffer projects, I (yanhu1hang) forked https://github.com/dhepper/font8x8, and merged several header files into one and made some minor changes. Usage:
-
-       void render(char *bitmap) {
-            int x,y;
-            int set;
-            for (x=0; x < 8; x++) {
-                for (y=0; y < 8; y++) {
-                    set = bitmap[x] & 1 << y;
-                    printf("%c", set ? 'X' : ' ');
-                }
-                printf("\n");
-            }
-       }
-
-       render(font8x8_basic['A']);
-
-Original README below.
-
-
-
-
-
+In March 2018, for my framebuffer projects, I (yanhu1hang) forked https://github.com/dhepper/font8x8, and merged several header files into one and made some minor changes.
 
 8x8 monochrome bitmap font for rendering
 =========================================
 
-A collection of header files containing a 8x8 bitmap font.
-
-font8x8.h contains all available characters
-font8x8_basic.h contains unicode points U+0000 - U+007F
-font8x8_latin.h contains unicode points U+0000 - U+00FF
-
 Author: Daniel Hepper <daniel@hepper.net>
 License: Public Domain
-
-Renderer
-========
-To visualize the font, a simple renderer is included in render.c
-
-    $ gcc render.c -o render
-    $ ./render 65
-      XX    
-     XXXX   
-    XX  XX  
-    XX  XX  
-    XXXXXX  
-    XX  XX  
-    XX  XX
 
 Credits
 =======
@@ -64,5 +23,3 @@ Original header:
 ; License:
 ;     Public Domain
 ;
-
-
